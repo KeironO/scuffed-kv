@@ -24,7 +24,7 @@ con = sqlite3.connect(
 cur = con.cursor()
 
 try:
-    cur.execute("CREATE TABLE pair(key TEXT UNIQUE, value TEXT UNIQUE)")
+    cur.execute("CREATE TABLE pair(key TEXT UNIQUE, value TEXT)")
 except sqlite3.OperationalError as e:
     pass
 
