@@ -4,8 +4,6 @@ scuffed-kv is a low performance and non-distributed key-value store accessible t
 
 ## Getting Started
 
-### Docker Deployment
-
 The easiest way to get this up and running is to make use of docker and docker-compose.
 
 In the scuffed-kv directory, simply run:
@@ -37,7 +35,7 @@ services:
 ```
 
 
-### Traefik
+### Reverse Proxy with Traefik
 
 ```
 version: "3.9"
