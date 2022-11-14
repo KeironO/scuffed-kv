@@ -69,24 +69,3 @@ networks:
 ## Documentation
 
 You can read all documentation by amending `/docs` to the scuffed-kv URL.
-
-### GET
-
-```
-curl -X GET \
-  'http://localhost:80/api/kv/126941005' \
-  --header 'Accept: */*' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
-    "value": "Subdural hemorrhage due to birth trauma"
-    }'
-```
-
-Returns:
-
-```
-{
-  "value": "Subdural hemorrhage due to birth trauma"
-}
-```
-
