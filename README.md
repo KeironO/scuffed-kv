@@ -1,27 +1,26 @@
 # scuffed-kv
 
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
 scuffed-kv is a low performance and non-distributed key-value store accessible through an HTTP API, that is built around a modular configuration to enable features on the fly.
 
 ## Getting Started
 
-The easiest way to get this up and running is to make use of docker and docker-compose.
+The easiest way to get this up and running is to simply use  `docker` in combination with `docker-compose`.
 
-In the scuffed-kv directory, simply run:
-
-```
-docker-compose build
-```
-
-Once complete, start the project using:
+Once you have cloned the directory, cd into it and simply run:
 
 ```
 docker-compose up -d
 ```
 
-Now go onto `http://localhost:80/docs` and you should see the documentation.
+Now go onto `http://localhost:80/docs` and you should see the all reference documentation.
 
 
 ### Persistent Storage
+
+You can storage persistent by simply amending a path to `/scuffed-kv/db`.
 
 ```
 version: "3.9"
@@ -34,8 +33,9 @@ services:
       - 80
 ```
 
-
 ### Reverse Proxy with Traefik
+
+scuffed-kv can be used with Traefik simply:
 
 ```
 version: "3.9"
@@ -67,6 +67,8 @@ networks:
 ```
 
 ## Documentation
+
+You can read all documentation by amending `/docs` to the scuffed-kv URL.
 
 ### GET
 
