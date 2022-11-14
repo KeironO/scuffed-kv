@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  scuffedkv:
+    build: .
+    volumes:
+      - ./db:/scuffed-kv/db
+    ports:
+      - "80:80"
