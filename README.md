@@ -84,8 +84,9 @@ curl -X GET \
 
 Returns:
 
+```
 {
   "value": "Subdural hemorrhage due to birth trauma"
 }
+```
 
-## Command Line Interface
