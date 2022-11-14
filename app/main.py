@@ -1,6 +1,7 @@
 from typing import Union
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, BaseSettings
+import os
 
 class Settings(BaseSettings):
     app_name: str
@@ -15,7 +16,11 @@ app = FastAPI()
 
 import sqlite3
 
-con = sqlite3.connect(settings.db_path, check_same_thread=False)
+
+con = sqlite3.connect(
+    os.path.join('db', settings.db_path),
+    check_same_thread=False
+)
 cur = con.cursor()
 
 try:
