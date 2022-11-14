@@ -4,8 +4,8 @@ from pydantic import BaseModel, BaseSettings
 import os
 
 class Settings(BaseSettings):
-    app_name: str
-    admin_email: str
+    app_name: str = "ScuffedCV"
+    admin_email: str = "keirono@github.com"
     db_path: str = 'database.db'
 
     class Config:
